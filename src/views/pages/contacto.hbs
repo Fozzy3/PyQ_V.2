@@ -1,0 +1,36 @@
+<!-- Pagina de contacto -->
+
+{{#each errors }}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+
+<div class="contacto-titulo">
+    <h1>Contacto</h1>
+</div>
+<div class="container flex">
+    <form id="task-form" action="/formulario" method="POST">
+        <div class="contenedor-contacto">
+            <h2 class="title">Contactanos</h2>
+            <input class="form-control icono" name="name" type="text" placeholder="    Nombre*" />
+            <input class="form-control icono" name="email" type="email" placeholder="    Email*" />
+            <input class="form-control icono" name="phone" type="number" placeholder="  Telefono*" />
+            <input class="form-control icono" name="company" type="text" placeholder="    Empresa* o N/A" />
+            <p class="proteccion-datos">*En caso de no poder brindar la informacion. Por favor llene el
+                espacio de la siguiente forma: N/A</p>
+            <textarea class="form-control icono" name="message" cols="2" placeholder="   Mensaje"></textarea>
+            <button class=" boton-formulario" type="submit">enviar </button>
+            <p class="proteccion-datos">*Conozca nuestra politica de privacidad sobre el manejo que
+                daremos a su informacion</p>
+            <a class="link-politicas" href="./contacto/proteccion-datos" target="_blank">Politicas de Privacidad</a>
+        </div>
+    </form>
+    <div class="container-alpha ">
+        <div id="map"></div>
+    </div>
+</div>
+<script LANGUAGE="JavaScript">
+    history.forward()
+</script>
